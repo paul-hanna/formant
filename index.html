@@ -1,52 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Agency Name</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/pki4big.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="logo">Formant</h1>
-      <nav class="nav">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
-    </div>
-  </header>
+<body class="bg-white text-neutral-700">
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h2>Clean, premium web experiences</h2>
-        <p>We build digital solutions at the intersection of art and technology.</p>
-        <a class="btn" href="#work">Our Work</a>
-      </div>
-    </section>
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-neutral-200">
+        <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-lora font-semibold text-black tracking-tight">Formant</a>
+            
+            <div class="hidden md:flex space-x-5 sm:space-x-8">
+                <a href="#services" class="nav-link text-neutral-600 hover:text-black transition-colors duration-200 relative pb-1 text-sm sm:text-base">Services</a>
+                <a href="#work" class="nav-link text-neutral-600 hover:text-black transition-colors duration-200 relative pb-1 text-sm sm:text-base">Work</a>
+                <a href="#founders" class="nav-link text-neutral-600 hover:text-black transition-colors duration-200 relative pb-1 text-sm sm:text-base">Founders</a>
+                <a href="#approach" class="nav-link text-neutral-600 hover:text-black transition-colors duration-200 relative pb-1 text-sm sm:text-base">Approach</a>
+                <a href="#ethos" class="nav-link text-neutral-600 hover:text-black transition-colors duration-200 relative pb-1 text-sm sm:text-base">Ethos</a>
+                <a href="#contact" class="nav-link text-neutral-600 hover:text-black transition-colors duration-200 relative pb-1 text-sm sm:text-base">Contact</a>
+            </div>
 
-    <section id="work" class="container grid">
-      <!-- repeat these cards as needed -->
-      <article class="card">
-        <h3>Project One</h3>
-        <p>Short description of the project.</p>
-      </article>
-      <article class="card">
-        <h3>Project Two</h3>
-        <p>Short description of the project.</p>
-      </article>
-    </section>
-  </main>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" aria-label="Open mobile menu" class="text-neutral-700 hover:text-black focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Your Agency Name</p>
-    </div>
-  </footer>
+        <div id="mobile-menu" class="md:hidden fixed inset-0 bg-white z-40 transform translate-x-full p-6 space-y-4">
+            <div class="flex justify-end">
+                <button id="mobile-menu-close-button" aria-label="Close mobile menu" class="text-neutral-700 hover:text-black focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <a href="#services" class="block py-2 px-4 text-lg text-neutral-700 hover:bg-neutral-100 rounded-md">Services</a>
+            <a href="#work" class="block py-2 px-4 text-lg text-neutral-700 hover:bg-neutral-100 rounded-md">Work</a>
+            <a href="#founders" class="block py-2 px-4 text-lg text-neutral-700 hover:bg-neutral-100 rounded-md">Founders</a>
+            <a href="#approach" class="block py-2 px-4 text-lg text-neutral-700 hover:bg-neutral-100 rounded-md">Approach</a>
+            <a href="#ethos" class="block py-2 px-4 text-lg text-neutral-700 hover:bg-neutral-100 rounded-md">Ethos</a>
+            <a href="#contact" class="block py-2 px-4 text-lg text-neutral-700 hover:bg-neutral-100 rounded-md">Contact</a>
+        </div>
+    </nav>
 
-  <script src="script.js"></script>
+    <header class="min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center text-center px-4">
+        <div class="relative z-10 p-6 max-w-4xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-lora font-bold mb-6 sm:mb-8 leading-tight text-black">
+                Strategic Digital.
+            </h1>
+            <p class="text-lg sm:text-xl text-neutral-700 max-w-2xl mx-auto mb-12">
+                We partner with ambitious brands to deliver impactful Google Ads campaigns and distinctive creative work that drives growth.
+            </p>
+            <a href="#contact" class="inline-block bg-black text-white px-10 py-3 rounded-md font-semibold text-lg hover:bg-neutral-800 transition-colors shadow-sm">
+                Schedule a Consultation
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 py-16 sm:py-24 space-y-20 sm:space-y-32">
+
+        <section id="services" class="scroll-mt-20 md:scroll-mt-24">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="section-title text-3xl sm:text-4xl font-lora font-semibold text-black mb-8 sm:mb-12 relative pb-4 text-center">Our Expertise</h2>
+                <div class="grid md:grid-cols-2 gap-x-12 lg:gap-x-16 gap-y-10 md:gap-y-0 mt-8">
+                    <div>
+                        <h3 class="text-2xl sm:text-3xl font-lora font-semibold text-black mb-5 text-left">Google Ads Mastery</h3>
+                        <p class="text-base sm:text-lg text-neutral-700 leading-loose mb-6">
+                            Precision-targeted campaigns designed for maximum impact and measurable ROI. We navigate the complexities of Google Ads to connect you with your ideal audience effectively, focusing on core business objectives.
+                        </p>
+                        <ul class="list-bullet list-none space-y-2 text-neutral-600">
+                            <li>Comprehensive PPC Campaign Management</li>
+                            <li>Advanced Performance Max Optimization</li>
+                            <li>E-commerce & Google Shopping Ads Strategy</li>
+                            <li>In-depth Strategic Google Ads Audits</li>
+                            <li>Precision Conversion Tracking & Analytics</li>
+                            <li>High-Converting Landing Page Consultation</li>
+                            <li>Continuous Bid, Targeting & Creative Refinement</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl sm:text-3xl font-lora font-semibold text-black mb-5 text-left">Bespoke Creative</h3>
+                        <p class="text-base sm:text-lg text-neutral-700 leading-loose mb-6">
+                            Crafting unique visual identities and compelling content that resonates. Our creative solutions are tailored to tell your brand's story with clarity, elegance, and strategic intent.
+                        </p>
+                        <ul class="list-bullet list-none space-y-2 text-neutral-600">
+                            <li>Brand Strategy & Identity Development</li>
+                            <li>Compelling Ad Creative & Copywriting</li>
+                            <li>Brand Narrative & Messaging Workshops</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="scroll-mt-20 md:scroll-mt-24">
+            <div class="text-center">
+                <h2 class="section-title text-3xl sm:text-4xl font-lora font-semibold text-black mb-8 sm:mb-12 relative pb-4">Selected Works</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"> 
+                <div class="work-item group">
+                    <img src="https://placehold.co/600x450/2c3e50/ecf0f1?text=Abstract+Forms" alt="Abstract Forms Project" class="w-full h-auto object-cover rounded-md">
+                    <div class="pt-4">
+                        <h3 class="text-lg font-medium text-black">Elysian Jewels</h3>
+                        <p class="text-sm text-neutral-600">Google Ads & Brand Refresh</p>
+                    </div>
+                </div>
+                <div class="work-item group">
+                    <img src="https://placehold.co/600x450/7f8c8d/ffffff?text=Minimalist+Lines" alt="Minimalist Lines Project" class="w-full h-auto object-cover rounded-md">
+                     <div class="pt-4">
+                        <h3 class="text-lg font-medium text-black">Innovatech Solutions</h3>
+                        <p class="text-sm text-neutral-600">Creative Strategy & PPC</p>
+                    </div>
+                </div>
+                <div class="work-item group">
+                    <img src="https://placehold.co/600x450/34495e/bdc3c7?text=Textured+Canvas" alt="Textured Canvas Project" class="w-full h-auto object-cover rounded-md">
+                     <div class="pt-4">
+                        <h3 class="text-lg font-medium text-black">Artisanal Weaves Co.</h3>
+                        <p class="text-sm text-neutral-600">E-commerce Ads & Content</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="founders" class="scroll-mt-20 md:scroll-mt-24">
+            <div class="max-w-3xl mx-auto text-left sm:text-center">
+                <h2 class="section-title text-3xl sm:text-4xl font-lora font-semibold text-black mb-8 sm:mb-12 relative pb-4">Meet Our Founders</h2>
+                <p class="text-base sm:text-lg text-neutral-700 leading-loose mb-6">
+                    Formant was founded by Paul Hanna and Elliott Montroll, former Google Ads strategists with a shared vision for elevating brands in the digital space. Paul (B.A. Columbia University, M.P.S. NYU ITP) and Elliott (B.A. Dartmouth College) bring a unique synergy to their work, blending rigorous performance discipline with an innate understanding of compelling story craft.
+                </p>
+                <p class="text-base sm:text-lg text-neutral-700 leading-loose">
+                    This fusion of analytical precision and creative intuition is the cornerstone of Formant's approach. We believe that the most impactful campaigns are not only data-driven but also deeply human, telling stories that resonate and inspire action. Our commitment is to leverage this philosophy to achieve exceptional results for your brand.
+                </p>
+            </div>
+        </section>
+
+         <section id="approach" class="scroll-mt-20 md:scroll-mt-24">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="section-title text-3xl sm:text-4xl font-lora font-semibold text-black mb-8 sm:mb-12 relative pb-4 text-center">Our Approach</h2>
+                <div class="grid md:grid-cols-3 gap-8 md:gap-12 text-center md:text-left">
+                    <div>
+                        <h3 class="text-xl font-lora font-semibold text-black mb-3">Data-Driven Insight</h3>
+                        <p class="text-neutral-600 leading-relaxed">
+                            Every strategy is grounded in rigorous analysis. We dissect data to uncover actionable insights, ensuring decisions are informed and impactful.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-lora font-semibold text-black mb-3">Creative Excellence</h3>
+                        <p class="text-neutral-600 leading-relaxed">
+                            We believe creativity is a powerful business tool. Our work aims to be not only beautiful but also strategically sound and results-oriented.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-lora font-semibold text-black mb-3">Transparent Partnership</h3>
+                        <p class="text-neutral-600 leading-relaxed">
+                            Open communication and collaboration are key. We work closely with you, providing clear reporting and insights every step of the way.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ethos" class="scroll-mt-20 md:scroll-mt-24">
+            <div class="max-w-3xl mx-auto text-left sm:text-center">
+                <h2 class="section-title text-3xl sm:text-4xl font-lora font-semibold text-black mb-8 sm:mb-12 relative pb-4">Our Ethos</h2>
+                <p class="text-base sm:text-lg text-neutral-700 leading-loose mb-6">
+                    At Formant, we believe in the synergy of data-driven strategy and human-centric creativity. Our approach is founded on partnership, transparency, and an unwavering pursuit of excellence. We don't just manage campaigns; we cultivate brand legacies.
+                </p>
+                <p class="text-base sm:text-lg text-neutral-700 leading-loose">
+                    Each project is an opportunity to create something distinctive and effective. Our commitment is to understand your vision and translate it into measurable success that elevates your brand.
+                </p>
+            </div>
+        </section>
+
+        <section id="client-highlights" class="scroll-mt-20 md:scroll-mt-24">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="section-title text-3xl sm:text-4xl font-lora font-semibold text-black mb-8 sm:mb-12 relative pb-4 text-center">Client Highlights</h2>
+                <div class="space-y-10">
+                    <blockquote class="border-l-2 border-neutral-300 pl-6 italic text-neutral-600 text-lg">
+                        <p class="mb-3">"Working with Formant transformed our approach to Google Ads. Their strategic insights and creative execution led to a 70% increase in qualified leads within the first quarter."</p>
+                        <footer class="font-semibold text-neutral-700">- CEO, Elysian Jewels (Fictional)</footer>
+                    </blockquote>
+                    <blockquote class="border-l-2 border-neutral-300 pl-6 italic text-neutral-600 text-lg">
+                        <p class="mb-3">"The team at Formant is not just skilled; they're true partners. They took the time to understand our brand deeply, and the results have been phenomenal. Our campaign ROAS has never been better."</p>
+                        <footer class="font-semibold text-neutral-700">- Marketing Director, Innovatech Solutions (Fictional)</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="scroll-mt-20 md:scroll-mt-24 pt-12 sm:pt-16">
+            <div class="max-w-xl mx-auto">
+                <div class="text-center mb-10 sm:mb-12">
+                    <h2 class="section-title text-3xl sm:text-4xl font-lora font-semibold text-black mb-8 sm:mb-12 relative pb-4">Let's Create Together</h2>
+                    <p class="text-base sm:text-lg text-neutral-700 leading-loose">Reach out to discuss how we can elevate your brand's digital journey.</p>
+                </div>
+                <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-5">
+                    <div>
+                        <label for="name" class="sr-only">Full Name</label>
+                        <input type="text" name="name" id="name" autocomplete="name" required class="block w-full px-4 py-3 border border-neutral-300 rounded-md focus:outline-none focus:ring-1 focus:ring-black focus:border-black sm:text-sm placeholder-neutral-500" placeholder="Full Name">
+                    </div>
+                    <div>
+                        <label for="email" class="sr-only">Email Address</label>
+                        <input type="email" name="email" id="email" autocomplete="email" required class="block w-full px-4 py-3 border border-neutral-300 rounded-md focus:outline-none focus:ring-1 focus:ring-black focus:border-black sm:text-sm placeholder-neutral-500" placeholder="Email Address">
+                    </div>
+                    <div>
+                        <label for="message" class="sr-only">Message</label>
+                        <textarea id="message" name="message" rows="4" required class="block w-full px-4 py-3 border border-neutral-300 rounded-md focus:outline-none focus:ring-1 focus:ring-black focus:border-black sm:text-sm placeholder-neutral-500" placeholder="How can we help?"></textarea>
+                    </div>
+                    <div>
+                        <button id="submit-button" type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md text-sm font-medium text-white bg-black hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black transition-colors">
+                            Send Inquiry
+                        </button>
+                    </div>
+                </form>
+                <div id="form-status" class="mt-4 text-center text-sm"></div>
+                <p class="mt-8 text-center text-sm text-neutral-600">
+                    Or email us: <a href="mailto:hello@formant.co" class="font-medium text-black hover:underline">hello@formant.co</a>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-neutral-200 mt-20 sm:mt-32">
+        <div class="container mx-auto px-6 py-10 text-center">
+            <p class="text-sm text-neutral-600">&copy; <span id="currentYear"></span> Formant. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+
 </body>
 </html>
